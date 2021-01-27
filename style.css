@@ -1,0 +1,686 @@
+*{
+	box-sizing: border-box;
+	font-family: Work Sans, sans-serif;
+}
+body{
+	margin: 0;
+	background: #1f1f1f;
+}
+header{
+	width: 100%;
+	position: sticky;
+	top: 0;
+	z-index: 20;
+	background: #202020bf;
+}
+.container{
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	width: 100%;
+	padding: 1.5% 0 1%;
+}
+.logo{
+	padding: 2%;
+}
+.logo img {
+	max-width: 55px;
+}
+.header-list{ 
+	margin: 10px 0;
+	padding: 0;
+	text-align: center;
+}
+.header-list li{
+	display: inline;
+	padding-left: 1.5em;
+}
+.header-list a {
+	display: inline-block;
+	padding-top: 0.5em;
+	color: #ffffff;
+	text-decoration: none;
+	font-size: 18px;
+	letter-spacing: 0.01em;
+	text-transform: uppercase;
+}
+.burger-list a{
+	display: inline-block;
+	padding-top: 1.5em;
+	color: #ffffff;
+	font-size: 20px;
+	letter-spacing: 0.12em;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+.header-list a:hover, .footer-home:hover{
+	color: #a24546;
+	border-top:1px solid #af191b;
+	border-radius: 22px;
+}
+.header-list input[type=text] {
+	padding: 10px;
+	font-size: 16px;
+	background: transparent;
+	border: 1px solid #595757;
+	color: #ffffff;
+	outline: none;
+}
+.hamburger-menu, .mob {
+	display: none;
+}
+h2 {
+	padding: 0 5%;
+	color: #ffffff;
+	font-size: 25px;
+	letter-spacing: 0.2em;
+	text-transform: uppercase;
+}
+.carousel {
+	display: flex;
+	flex-direction: row;
+	padding: 3% 0;
+}
+.card:not(:first-child) {
+	margin-left: -20px;
+}
+.card {
+	display: flex;
+	height: 280px;
+	width: 20%;
+	background-color: #1f1f1f;
+	border-radius: 10px;
+	box-shadow: -1.5rem 0 3rem #000;
+	transition: 0.4s ease-out;
+	position: relative;
+	left: 0px;
+}
+.card:hover {
+	position: relative;
+	bottom: 50px;
+	transform: translateY(-20px);
+	transition: 0.7s ease-out;
+}
+.title {
+	color: white;
+	font-weight: 300;
+	position: absolute;
+	left: 20px;
+	top: 15px;
+	background: rgb(32 32 32 / 37%);
+}
+.img-card img{
+	width: 100%;
+	height: 280px;
+}
+.film-card {
+	display: flex;
+	width: 100%;
+	padding: 2% 5%;
+}
+.film-poster {
+	display: flex;
+	width: 50vh;
+	height: 55vh;
+}
+.film-poster img{
+	width: 100%;
+}
+.film-title h2 {
+	padding: 0;
+	margin: 0;
+}
+.film-title span {
+	color: #6f6f6f;
+	font-size: 12px;
+	text-transform: uppercase;
+}
+.film-info {
+	width: 100%;
+	padding-left: 5%;
+}
+h4, p {
+	margin: 0;
+	padding: 0;
+}
+.calendar {
+	display: flex;
+	flex-direction: column;
+	color: #ffffff;
+}
+.week {
+	display: flex;
+	justify-content: space-around;
+	color: #ffffff;
+	letter-spacing: 0.07em;
+	text-align: center;
+} 
+.days {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	letter-spacing: 0.06em;
+}
+.mySlides{
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+}
+.day-info{
+	padding-bottom: 1%;
+	cursor: pointer;
+}
+.day-info::before {
+	content: '.';
+	font-size: 3em;
+	color: #af191b;
+	visibility: hidden;
+}
+.day-info:hover {
+	border-bottom: 1px solid #af191b;
+	border-radius: 22px;
+}
+.day-info:hover:before{ 
+	visibility: visible;
+}
+.date {
+	font-size: 4em;
+	font-weight: bold;
+}
+.date:hover{
+	font-size: 5em;
+	transition: .3s linear;
+}
+.mounth {
+	font-size: 0.8em;
+	color: #a5a5a5;
+}
+.arrow {
+	display: flex;
+	justify-content: space-between;
+	font-size: 2em;
+	color: #585757;
+	cursor: pointer;
+}
+.arrow:hover{
+	color: #af191b;
+}
+.sessions {
+	display: none;
+	justify-content: space-between;
+	padding: 2%;
+	background: #5957576e;
+	transition: 0.4s ease-out;
+}
+.sessions-info {
+	display: flex;
+	background: #ffffff;
+	padding: 1%;
+	border-radius: 6px;
+	cursor: pointer;
+}
+.sessions-info:hover {
+	background-color: #bfbfbf;
+}
+.ad-info {
+	display: flex;
+	flex-direction: column;
+}
+h3 {
+	padding: 3% 0;
+	margin: 0;
+	color: #ffffff;
+	font-weight: 400;
+	letter-spacing: 0.05em;
+	cursor: pointer;
+}
+h3:hover {
+	color: #af191b;
+}
+h5 {
+	display: none;
+	padding-top: 3%;
+	font-weight: 300;
+	text-transform: uppercase;
+	color: #7c7c7c;
+}
+h5:hover {
+	color: #af191b;
+}
+.theatre::before {
+	content: 'Screen';
+	position: relative;
+	top: -4em;
+	left: 10em;
+	font-size: 40px;
+	color: #595757;
+}
+.theatre {
+	display: none;
+	padding-top: 20%;
+}
+.cinema-seats {
+	display: flex;
+}
+.seat {
+	cursor: pointer;
+}
+div.seat.busy {
+	background: #808080;
+} 
+.seat:hover:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.5);
+	border-radius: 7px;
+} 
+.seat:active:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(255, 255, 255, 0.6);
+	border-radius: 7px;
+}
+div.seat.busy:hover:before, div.seat.busy:active:before {
+	background: #808080;
+} 
+
+.left .cinema-row {
+	transform: skew(-15deg);
+	margin: 0 6px;
+}
+.cinema-row .seat {
+	width: 35px;
+	height: 50px;
+	border-radius: 7px;
+	background: linear-gradient(to top, #761818, #761818, #761818, #761818, #761818, #B54041,  #F3686A);
+	margin-bottom: 10px;
+	transform: skew(20deg);
+	margin-top: -32px;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.5)
+}
+.right {
+	margin-left: 70px;
+}
+.cinema-row {
+	transform: skew(348deg);
+	margin: 0 6px;
+}
+.first +.session-info {
+	color: blue;
+}
+.social-botton {
+	display: flex;
+}
+.icon {
+	width: 7vh;
+	padding: 0 1vh;
+}
+.footer-home {
+	display: inline-block;
+	padding: 1% 20px;
+	color: #ffffff;
+	font-size: 15px;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+#menu__toggle {
+	opacity: 0;
+}
+.menu__btn {
+	display: flex;
+	align-items: center;
+	position: fixed;
+	padding: 5% 4% 0 5%;
+	top: 20px;
+	left: 20px;
+	width: 26px;
+	height: 26px;
+	cursor: pointer;
+	z-index: 1;
+}
+.menu__btn > span,.menu__btn > span::before, .menu__btn > span::after {
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 2px;
+	background-color: #b01b1c;
+}
+.menu__btn > span::before {
+	content: '';
+	top: -12px;
+}
+.menu__btn > span::after {
+	content: '';
+	top: 12px;
+}
+.menu__box {
+	display: flex;
+	flex-direction: column;
+	position: fixed;
+	visibility: hidden;
+	top: 0;
+	left: -100%;
+	width: 60%;
+	height: 100%;
+	margin: 0;
+	padding: 80px 0;
+	list-style: none;
+	text-align: center;
+	background-color: #1f1f1fe6;
+	box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+}
+.menu__item {
+	display: block;
+	padding: 12px 24px;
+	color: #333;
+	font-family: 'Roboto', sans-serif;
+	font-size: 20px;
+	font-weight: 600;
+	text-decoration: none;
+}
+.menu__item:hover {
+	background-color: #65656580;
+}
+#menu__toggle:checked ~ .menu__btn > span {
+	transform: rotate(45deg);
+}
+#menu__toggle:checked ~ .menu__btn > span::before {
+	top: 0;
+	transform: rotate(0);
+}
+#menu__toggle:checked ~ .menu__btn > span::after {
+	top: 0;
+	transform: rotate(90deg);
+}
+#menu__toggle:checked ~ .menu__box {
+	visibility: visible;
+	left: 0;
+}
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+	transition-duration: .25s;
+}
+.menu__box {
+	transition-duration: .25s;
+}
+.menu__item {
+	transition-duration: .25s;
+}
+
+
+
+
+
+
+@media (max-width: 1050px) and (min-width: 800px) {
+	.card:nth-child(3n) {
+		display: none;
+	}
+	.title {
+		font-size:25px
+	}
+	.header-list {
+		font-size: 30px;
+	}
+	.film-poster {
+		width:400px;
+		height:380px;
+	}
+	.date {
+		font-size:3em
+	}
+	.day-info {
+		padding: 0 5px;
+		letter-spacing:0
+	}
+	.day-info h4 {
+		font-weight:400
+	}
+	.icon {
+		width: 5vh;
+	}
+	footer {
+		padding-top: 16%;
+	}
+}
+@media (max-width: 800px) and (min-width: 600px) {
+	.card:nth-child(2n), .header-list >li >input {
+		display: none;
+	}
+	.card {
+		width:40%
+	}
+	.title {
+		font-size:25px
+	}
+	.header-list {
+		font-size: 30px;
+	}
+	.film-poster {
+		min-width:180px;
+		max-height:280px;
+	}
+	.film-info {
+		padding-left: 3%;
+		width: 500px;
+	}
+	.date {
+		font-size:3em
+	}
+	.day-info {
+		padding: 0 5px;
+		letter-spacing:0
+	}
+	.day-info h4 {
+		font-weight:400
+	}
+	.sessions {
+		padding:2% 3%;
+	} 
+	.sessions-info {
+		padding: 0 1.5px;
+		margin-left: 10px;
+		border-radius: 6px;
+		font-size:14px
+	}
+	.theatre {
+		position: relative;
+		right: 367px;
+		top: 70px;
+	}
+	.theatre::before {
+		top: -3.5;
+	}
+	footer {
+		padding-top: 15%;
+	}
+	.icon {
+		width: 5vh;
+	}
+}
+@media (max-width: 600px) and (min-width: 500px) {
+	.header-list {
+		display:flex;
+	}
+	header {
+		position: static;
+	}
+	.header-list a {
+		letter-spacing: 0;
+		font-size: 15px;
+	}
+	.container {
+		justify-content:space-between;
+		padding: 1% 4%;
+	}
+	.header-list >li >input {
+		display:none;
+	}
+	.card:nth-child(2n) {
+		display: none;
+	}
+	.card {
+		width:30%;
+	}
+	.film-card {
+		flex-direction: column;
+	}
+	.film-poster {
+		display: block;
+		width: 100%;
+		height: 55vh;
+	}
+	.film-title {
+		background-color: #1d1d1d8c;
+		padding-left: 5%;
+	}
+	.film-title span {
+		color: #000000;
+	}
+	.film-info {
+		padding: 0;
+	}
+	.date {
+		font-size:2em
+	}
+	.day-info {
+		padding: 0 5px;
+		letter-spacing:0;
+	}
+	.day-info h4 {
+		font-weight:400;
+		font-size:15px;
+	}
+	.muSlides {
+		padding-top: 4%;
+	}
+	.sessions {
+		padding:2% 3%;
+	} 
+	.sessions-info {
+		padding: 0 1.5px;
+		margin-left: 10px;
+		border-radius: 6px;
+		font-size:14px
+	}
+	.sessions-info p {
+		padding: 4px;
+		text-align: center;
+	}
+	.cinema-row .seat {
+		width: 20px;
+		height: 38px;
+		margin-bottom: 18px;
+	}
+	.theatre {
+		position: relative;
+		right: 150px;
+		top: 70px;
+		padding-top: 15%;
+	}
+	.theatre::before {
+		top: -3em;
+		left: 8em;
+	}
+	.right {
+		margin-left: 40px;
+	}
+	footer {
+		padding-top: 17%;
+	}
+	.social-botton {
+		display: none;
+	}
+}
+@media (max-width: 450px) and (min-width: 350px){
+	.card, nav {
+		display:none;
+	}
+	.card:first-child,.card:nth-child(2){
+		display:flex;
+	}
+	.container {
+		flex-wrap: nowrap;
+		position: relative;
+		justify-content: flex-end;
+		padding: 4% 4% 1%;
+	}
+	.card {
+		width: 95%;
+	}
+	.hamburger-menu {
+		display: flex;
+	}
+	.film-card {
+		flex-direction: column;
+	}
+	.film-poster {
+		display: block;
+		width: 100%;
+	}
+	.film-poster img{
+		height: 50vh;
+	}
+	.film-title {
+		padding-left: 5%;
+	}
+	.film-title span {
+		color: #595757;
+	}
+	.film-info {
+		padding: 0;
+	}
+	.day-info h4:first-child{
+		display:none;
+	}
+	.mob {
+		display:block;
+	}
+	.date {
+		font-size:2em;
+	}
+	.day-info {
+		padding: 0 5px;
+		letter-spacing:0;
+	}
+	.day-info h4 {
+		font-weight:400;
+		font-size:16px;
+	}
+	.sessions {
+		flex-wrap:wrap;
+	}
+	.sessions-info {
+		padding:3%;
+		margin: 2%
+	}
+	.cinema-row .seat {
+		width: 20px;
+		height: 20px;
+		margin-top: 0;
+	}
+	.theatre {
+		position: relative;
+		padding-left: 20%;
+		transform: rotate(90deg);
+	}
+	.right {
+		margin-left: 30px;
+	}
+	.theatre::before {
+		width: 10%;
+		top: -2.5em;
+		left: 6em;
+	}
+	footer {
+		display: none;
+	}
+}
